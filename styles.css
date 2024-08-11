@@ -1,0 +1,222 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+:root{
+    --colordark1: #112d4e;
+    --colordark2: #3f72af;
+    --colorlight1: #dbe2ef;
+    --colorlight2: #f9f7f7;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    color: var(--colorlight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    
+}
+#heading1{
+    text-align: center;
+    padding-top: 3rem;
+    text-transform: uppercase;
+}
+.tab-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    width: 90%;
+    max-width: 550px;
+}
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+
+}
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.weather-container{
+    margin-block: 4rem;
+}
+
+/* grant location access container */
+.grant-location-container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.grant-location-container.active{
+    display: flex;
+}
+.grant-location-container img{
+    margin-bottom: 2rem;
+}
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+}
+.btn{
+    background-color: var(--colordark2);
+    border-radius: 5px;
+    font-size: 0.85rem;
+    padding: 10px 30px;
+    color: var(--colorlight2);
+    border: none;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+.btn:hover{
+    background-color: var(--colordark1);
+    opacity: 1;
+}
+
+
+/* form section */
+.form-action{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+.form-action.active{
+    display: flex;
+}
+.form-action input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+.form-action input::placeholder{
+    color: rgba(255, 255, 255, 0.7);;
+}
+.form-action input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+.form-action .btn{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-info-container{
+    display: none;
+}
+.user-info-container.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 550px;
+    width: 90%;
+}
+.name{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.name p{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.name img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.user-info-container p[data-weatherDesc]{
+    font-size:1.5rem;
+    font-weight:200;
+}
+.user-info-container img[data-wetherIcon]{
+    width:90px;
+    height:90px;
+}
+.user-info-container p[data-temp]{
+    font-size:2.75rem;
+    font-weight:700;
+}
+.parameter-container{
+    display: flex;
+    width: 100%;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+.parameter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 5px 0;
+}
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+
+.loading-container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loading-container img{
+    width: 200px;
+    height: 200px;
+}
+.loading-container p{
+    text-transform: uppercase;
+}
+.loading-container.active{
+    display: flex;
+}
+
+@media (max-width: 640px) {
+    .parameter-container{
+        width: 200%;
+        flex-direction: column; 
+    }
+}
