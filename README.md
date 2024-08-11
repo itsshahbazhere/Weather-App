@@ -31,4 +31,4 @@ To set up and use WeatherApp, follow these steps:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/weatherapp.git
+   git clone https://github.com/shahbazalam26/Weather-App.git
